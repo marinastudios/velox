@@ -13,7 +13,7 @@ import type { Writable } from 'svelte/types/runtime/store';
  * @param writable The writable you want to save
  * @param key The localstorage key you want to save the writable as. default is 'store'
  */
-export default (writable: Writable<any>, key='store')=>{
+export default (writable: Writable<unknown>, key='store'): void =>{
     const json = localStorage.getItem(key);
     if (json) {
        writable.set(JSON.parse(json));
