@@ -1,4 +1,8 @@
-# Pre-built tech stack ttskn(TS, TailwindCSS, SvelteKit, Netlify) Pronounced Tisk-N or Tisken
+# Pre-built tech stack ttskn(TS, TailwindCSS, SvelteKit, Netlify) Pronounced Tisk-N or Tiskin
+To start run
+```
+npm i
+```
 ## Testing
 ```bash
 npm run dev
@@ -13,7 +17,8 @@ git init # if you havent already
 git remote add origin github.com/<username>/<repo>.git
 git add .
 git commit -am "Initial commit"
-git push --set-upstream origin master
+git branch -M main
+git push --set-upstream origin main
 ```
 ### CLI
 ```bash 
