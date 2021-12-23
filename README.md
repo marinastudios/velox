@@ -29,18 +29,3 @@ git commit -am "Inition commit"
 git push --set-upstream origin master
 ```
 3. Add your repo to netlify. If you have created your account you should be able to login to the [Netlify Console](https://app.netlify.com), here you can create your team and link github account, after doing so create the app from your github repo
-## publishing (without netlify)
-find the sveltekit adapter for your platform here is the [folder the adapters are saved](https://github.com/sveltejs/kit/tree/master/packages), if you cant find the one you need try adapter-auto.  
-Run
-```bash
-npm uninstall adapter-netlify
-npm i -D @sveltejs/adapter-<type>@next
-```
-change
-```js
-import adapter from '@sveltejs/adapter-netlify';
-```
-in svelte.config.js to
-```js
-import adapter from '@sveltejs/adapter-<type>';
-```
