@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { scale, fade } from 'svelte/transition';
 	import { circInOut } from 'svelte/easing';
-	export let title: string = "Modal";
-	export let message: string = "";
+	export let title: string = "Title";
+	export let message: string = "Message";
 	export let yes: string = "Yes";
 	export let no: string = "No";
 	export let ok: string = "Ok";
@@ -13,7 +13,11 @@
 		show = false;
 		callback(res)
 	}
-	export function open() {
+	export function open(titl?, messag?, ye?, n?) {
+		title = titl
+		message = messag
+		yes = ye? ye:'Yes'
+		no = n? n:'No'
 		show = true;
 	}
 </script>

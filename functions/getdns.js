@@ -5,11 +5,11 @@
   To call a serverless function send a request to <hostname>/.netlify/functions/<filename (without extension)>
 */
 import dns from "dns";
-exports.handler = /*async (if await is needed)*/(event, context, callback /* Return data */) => {
-  dns.resolve(event.queryStringParameters.hostname, 'ANY', (err, records) => {
+exports.handler = (event, context, callback /* Return data */) => {
+  dns.resolve(event.queryStringParameters.name, 'ANY', (err, records) => {
     callback(err, {
       statusCode: 200,
-      body: JSON.stringify(records),
+      body: JSON.stringify({...records}),
     });
   });
 };
