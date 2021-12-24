@@ -1,4 +1,4 @@
-# Pre-built tech stack ttskn(TS, TailwindCSS, SvelteKit, Netlify) Pronounced Tisk-N or Tiskin
+# Pre-built tech stack ttskn(TS, TailwindCSS, SvelteKit + extra libs ([find more](https://sveltesociety.dev/components)), Netlify) Pronounced Tisk-N
 To start run
 ```
 npm i
