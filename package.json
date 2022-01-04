@@ -36,6 +36,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"nightwind": "^1.1.12",
 		"svelte-notifications": "^0.9.93"
 	}
 }
