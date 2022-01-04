@@ -1,8 +1,10 @@
 <script lang="ts">
+    // Utility libraries
     import Modal from '$lib/components/Modal.svelte';
     import { getNotificationsContext } from '$lib/svelte-notifications'
-    import allpos from '$lib/svelte-notifications/src/positions'
     const { addNotification } = getNotificationsContext()
+    // just for testing
+    import allpos from '$lib/svelte-notifications/src/positions'
     let modal
     let value
     function createAll() {
