@@ -8,5 +8,5 @@ would require
 ```js
 import Error from  '../../../../../lib/Error.svelte'
 ```
-$lib can be changed to whatever you want by changing $lib and $lib/* to $<name> and $<name>/*
+$lib can be changed to whatever you want by changing $lib and $lib/* to $\<name> and $\<name>/*
 inside compilerOptions.paths in tsconfig.json
