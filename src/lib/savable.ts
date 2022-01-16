@@ -19,7 +19,7 @@ const attach = (writable: Writable<unknown>, key='store'): void =>{
     if (json) {
        writable.set(JSON.parse(json));
     }
-  
+
     writable.subscribe(current => {
         localStorage.setItem(key, JSON.stringify(current));
     });
@@ -59,7 +59,7 @@ function savable<T>(key: string, value?: T, start?: StartStopNotifier<T>): TSava
             if (json) {
                 base.set(JSON.parse(json));
             }
-          
+
             this.unsub = base.subscribe(current => {
                 localStorage.setItem(key, JSON.stringify(current));
             });
