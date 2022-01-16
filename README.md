@@ -8,12 +8,6 @@ you can delete everything in src/routes except \_\_error.svelte and \_\_layout.s
 
 \_\_layout.svelte is used for making a layout every page follows, each directory can have its own \_\_layout eg. the top level \_\_layout has a navbar and a footer with content in the middle, the \_\_layout.svelte in /settings has a side menu with links to each setting (or auto genereted links)
 
-you can delete everything in src/routes except **error.svelte and **layout.svelte
-
-## \_\_layout.svelte
-
-**layout.svelte is used for making a layout every page follows, each directory can have its own **layout eg. the top level **layout has a navbar and a footer with content in the middle, the **layout.svelte in /settings has a side menu with links to each setting (or auto genereted links)
-
 To start run
 
 ```
