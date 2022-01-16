@@ -3,7 +3,6 @@
 	import Notifications from '$lib/svelte-notifications'; //svelte notification library
 	import { onMount } from 'svelte'
 	import nightwind from '$lib/nwpp'
-    $: dark = nightwind.dark
     /*
         Dropdown menu, show/hide based on menu state.
 
@@ -15,32 +14,10 @@
             To: "transform opacity-0 scale-95"
     */
 	onMount(()=>{
-        nightwind.dark = nightwind.getDark();
-        (function() {
-            function getInitialColorMode() {
-                const persistedColorPreference = window.localStorage.getItem('nightwind-mode');
-                const hasPersistedPreference = typeof persistedColorPreference === 'string';
-                if (hasPersistedPreference) {
-                    return persistedColorPreference;
-                }
-                const mql = window.matchMedia('(prefers-color-scheme: dark)');
-                const hasMediaQueryPreference = typeof mql.matches === 'boolean';
-                if (hasMediaQueryPreference) {
-                    return mql.matches ? 'dark' : 'light';
-                }
-                return 'light';
-            }
-        getInitialColorMode() == 'light' ? document.documentElement.classList.remove('dark') : document.documentElement.classList.add('dark');
-        })()
+        nightwind.mount();
     })
-    nightwind.toggle = () => {
-        nightwind.dark = !nightwind.dark
-        nightwind.oldtoggle()
-    }
-    nightwind.enable = () => {
-        nightwind.dark = dark
-        nightwind.oldenable(dark)
-    }
+
+    $: console.log(`changed .dark ${(() => {let value;nightwind.dark.subscribe(_ => value = _);return value;})()}`);
 </script>
 
 <Notifications>
