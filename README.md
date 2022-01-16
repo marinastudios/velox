@@ -4,8 +4,6 @@ you can delete everything in src/routes except __error.svelte and __layout.svelt
 ## __layout.svelte 
 __layout.svelte is used for making a layout every page follows, each directory can have its own __layout eg. the top level __layout has a navbar and a footer with content in the middle, the __layout.svelte in /settings has a side menu with links to each setting (or auto genereted links)  
 
-
-
 To start run
 ```
 npm i
