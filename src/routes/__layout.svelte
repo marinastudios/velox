@@ -1,6 +1,5 @@
 <script>
 	import '../app.css';
-	import Notifications from '$lib/svelte-notifications'; //svelte notification library
 	import { onMount } from 'svelte'
 	import nightwind from '$lib/nwpp'
     /*
@@ -20,6 +19,4 @@
     $: console.log(`changed .dark ${(() => {let value;nightwind.dark.subscribe(_ => value = _);return value;})()}`);
 </script>
 
-<Notifications>
-	<slot />
-</Notifications>
+<slot />
