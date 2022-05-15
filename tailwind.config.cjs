@@ -1,3 +1,4 @@
+import nightwind from 'nightwind';
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
@@ -5,7 +6,7 @@ const config = {
 		extend: {}
 	},
 
-	plugins: []
+	plugins: [nightwind()]
 };
 
 module.exports = config;

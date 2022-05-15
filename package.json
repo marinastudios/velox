@@ -1,7 +1,7 @@
 {
 	"name": "ttskn",
 	"version": "0.0.1",
-	"description": "Typescript, Tailwind, SvelteKit, Netlify stack (Pronounced Tisken)",
+	"description": "Typescript, Tailwind + Nightwind, SvelteKit (Pronounced Tisken)",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
